@@ -1,0 +1,15 @@
+bject = {}
+                searchObject[searchKey] = searchValue;
+
+                console.log(searchObject, searchCollection);
+
+                dbo.collection(searchCollection).findOne(searchObject, function (err, res) {
+                    if (err) reject(err);
+
+                    console.log("Found item!", res);
+
+                    db.close();
+                    resolve(res);
+                });
+            })
+        })
